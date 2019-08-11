@@ -1,0 +1,53 @@
+<html>
+<head><title>Indian State List</title></head>
+<body>
+<div class="prediction">
+  <form action="{{ url_for('predict')}}"method="post">
+   	<input type="text" name="cars" placeholder="Number of Cars">
+   	<select name=list id="ddlViewBy">
+	<option value="">------------Select State------------</option>
+	<option value="1">Andhra Pradesh</option>
+	<option value="2">Assam</option>
+	<option value="3">Bihar</option>
+	<option value="4">Chandigarh</option>
+	<option value="5">Chhattisgarh</option>
+	<option value="6">Dadra and Nagar Haveli</option>
+	<option value="7">Daman and Diu</option>
+	<option value="8">Delhi</option>
+	<option value="9">Goa</option>
+	<option value="10">Gujarat</option>
+	<option value="11">Haryana</option>
+	<option value="12">Himachal Pradesh</option>
+	<option value="13">Himachal Pradesh</option>
+	<option value="14">Jharkhand</option>
+	<option value="15">Karnataka</option>
+	<option value="16">Kerala</option>
+	<option value="17">Madhya Pradesh</option>
+	<option value="18">Maharashtra</option>
+	<option value="19">Manipur</option>
+	<option value="20">Meghalaya</option>
+	<option value="21">Mizoram</option>
+	<option value="22">Nagaland</option>
+	<option value="23">Orissa</option>
+	<option value="24">Pondicherry</option>
+	<option value="25">Punjab</option>
+	<option value="26">Rajasthan</option>
+	<option value="27">Tamil Nadu</option>
+	<option value="28">Uttarakhand</option>
+	<option value="29">Uttar Pradesh</option>
+	<option value="30">West Bengal</option>
+	</select>
+	<button type="submit" onclick="fun();">Predict</button>
+	</form>
+{{ prediction_text }}
+</div>
+</body>
+<script type="text/javascript">
+	function fun() {
+		// body...
+		var e = document.getElementById("ddlViewBy");
+		var strUser = e.options[e.selectedIndex].value;
+		console.log(strUser);
+	}
+</script>
+</html>
